@@ -11,7 +11,7 @@ export default function Alldata() {
   useEffect(() => {
     async function axiosProd() {
       try {
-        const response = await axios.get("http://localhost:8080/data");
+        const response = await axios.get("https://bank-server-1-c34h.onrender.com/data");
         console.log("Fetched Data:", response.data); 
         setData(response.data);
       } catch (error) {
