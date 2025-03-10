@@ -17,7 +17,7 @@ export default function Register() {
 
         let item = { name: name, email: gmail, password: pass, amount: 1000 };
 
-        axios.post('https://bank-server-1-c34h.onrender.com/create', item)
+        axios.post('https://bank-server-4efb.onrender.com/create', item)
             .then(response => {
                 setName('');
                 setGmail('');
