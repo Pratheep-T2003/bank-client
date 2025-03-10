@@ -11,7 +11,7 @@ export default function Deposit() {
     async function handleLogin(e) {
         e.preventDefault();
         try {
-            const response = await fetch("https://bank-server-1-c34h.onrender.com/login", {  
+            const response = await fetch("https://bank-server-4efb.onrender.com/login", {  
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ name: username, password })
@@ -43,7 +43,7 @@ export default function Deposit() {
         }
 
         try {
-            const response = await fetch("https://bank-server-1-c34h.onrender.com/deposit", {  
+            const response = await fetch("https://bank-server-4efb.onrender.com/deposit", {  
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ userId, deposit: dep })  
