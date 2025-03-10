@@ -11,7 +11,7 @@ export default function Alldata() {
   useEffect(() => {
     async function axiosProd() {
       try {
-        const response = await axios.get("https://bank-server-1-c34h.onrender.com/data");
+        const response = await axios.get("https://bank-server-4efb.onrender.com/data");
         console.log("Fetched Data:", response.data); 
         setData(response.data);
       } catch (error) {
@@ -24,7 +24,7 @@ export default function Alldata() {
 
   async function handleDelete(id) {
     try {
-      await axios.delete(`https://bank-server-1-c34h.onrender.com/delete/${id}`);
+      await axios.delete(`https://bank-server-4efb.onrender.com/delete/${id}`);
       setData(data.filter((item) => item._id !== id));
     } catch (error) {
       console.error("Error deleting:", error);
@@ -41,11 +41,11 @@ export default function Alldata() {
       console.log("Updating ID:", editId);
       console.log("Form Data Sent:", formData);
   
-      const response = await axios.put(`https://bank-server-1-c34h.onrender.com/update/${editId}`, formData);
+      const response = await axios.put(`https://bank-server-4efb.onrender.com/update/${editId}`, formData);
       
       console.log("Update Response:", response.data);
   
-      const updatedResponse = await axios.get("https://bank-server-1-c34h.onrender.com/data"); 
+      const updatedResponse = await axios.get("https://bank-server-4efb.onrender.com/data"); 
       setData(updatedResponse.data);
       
       setEditId(null);
